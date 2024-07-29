@@ -25,7 +25,7 @@ mongoose.connection.on("disconnected", () => {
   console.log("MongoDB disconnected");
 });
 
-app.post("/", (req, res) => {
+app.post("/login", (req, res) => {
   const { email, password } = req.body;
   UserModel.findOne({ email: email })
     .then(user => {
@@ -46,7 +46,7 @@ app.post("/", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-  EmployeeModel.create(req.body)
+  UserModel.create(req.body)
     .then(employee => res.json(employee))
     .catch(err => {
       console.error("Error creating user:", err);
