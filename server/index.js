@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const EmployeeModel = require("./model/Employee");
+const UserModel = require("./model/Users");
 
 dotenv.config();
 
@@ -27,7 +27,7 @@ mongoose.connection.on("disconnected", () => {
 
 app.post("/", (req, res) => {
   const { email, password } = req.body;
-  EmployeeModel.findOne({ email: email })
+  UserModel.findOne({ email: email })
     .then(user => {
       if (user) {
         if (user.password === password) {
