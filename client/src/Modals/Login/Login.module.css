@@ -1,0 +1,78 @@
+.Outer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(white, rgb(178,166,254));
+}
+.login-modal{
+    background-color: rgb(246, 246, 246);
+    padding: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid #CECECE;
+}
+@media only screen and (min-width:767px){
+    .login-modal{
+        width: 40.5rem;
+    }
+}
+.login-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+@media only screen and (min-width:767px){
+    .login-title{
+        font-size: 2rem;
+    }
+}
+.workflow{
+    color: rgb(69,52,172);
+}
+.email-input,.password-input{
+    font-size: 0.75rem;
+    min-width: -webkit-fill-available;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(235, 235, 235);
+}
+@media only screen and (min-width:767px){
+    .email-input,.password-input{
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+.login-button{
+    min-width: -webkit-fill-available;
+    padding: 0.75rem;
+    border: none;
+    background-color: rgb(120, 108, 193);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 400;
+    border-radius: 4px;
+}
+@media only screen and (min-width:767px){
+    .login-button{
+        font-size: 1rem;
+    }
+}
+.new-acc{
+    font-size: 0.725rem;
+    margin-top: 1.125rem;
+    margin-bottom: 0;
+    color: rgb(114, 114, 114);
+    text-align: center;
+    font-weight: 400;
+}
+@media only screen and (min-width:767px){
+    .new-acc{
+        font-size: 1.125rem;
+    }
+}
+.register{
+    color: rgb(0,84,161);
+    text-decoration: none;
+}

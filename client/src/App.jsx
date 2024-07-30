@@ -2,8 +2,8 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
-import Signup from './Signup'
-import Login from './Login'
+import Signup from './Modals/Signup/Signup'
+import Login from './Modals/Login/Login'
 import Home from './Home'
 
 

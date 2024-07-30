@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import classes from './Login.module.css';
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -26,54 +27,42 @@ function Login() {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-      <div className="bg-white p-3 rounded w-25">
-        <h2 className="text-center">Login</h2>
+    <>
+    <div className={classes.Outer}>
+      <div className={classes['login-modal']}>
+        <p className={classes['login-title']}>Welcome to <span className={classes.workflow}>Workflow</span>!</p>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="email" className="form-label">
-              <strong>Email</strong>
-            </label>
             <input
               type="email"
-              placeholder="Enter Email"
+              placeholder="Your email"
               autoComplete="off"
               name="email"
-              className="form-control rounded-0"
+              className={classes['email-input']}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="password" className="form-label">
-              <strong>Password</strong>
-            </label>
+          <div className="mb-4">
             <input
               type="password"
-              placeholder="Enter Password"
+              placeholder="Password"
               name="password"
-              className="form-control rounded-0"
+              className={classes['password-input']}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0">
+          <button type="submit" className={classes['login-button']}>
             Login
           </button>
         </form>
-        <p className="mt-3 text-center">
-          Don't have an account?
-        </p>
-        <Link
-          to="/register"
-          className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none"
-        >
-          Sign Up
-        </Link>
+        <p className={classes['new-acc']}>Don't have an account? Create a <Link to='/register' className={classes.register}>new account</Link></p>
       </div>
     </div>
+    </>
   );
 }
 
